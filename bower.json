@@ -1,0 +1,29 @@
+{
+	"name": "angular-google-auth",
+	"version": "1.0.0",
+	"authors": [
+		"Luke Madera <luke.madera@gmail.com>"
+	],
+	"description": "AngularJS Google login directive",
+	"keywords": [
+		"angular",
+		"AngularJS",
+		"google",
+		"login",
+		"angular-google-auth",
+		"service"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"angular":"~1.2.0"
+	},
+	"devDependencies": {
+	}
+}
