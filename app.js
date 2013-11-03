@@ -19,7 +19,7 @@ config(['$routeProvider', '$locationProvider', '$compileProvider', function($rou
 	// var staticPath ='/';
 	var staticPath;
 	staticPath ='/angular-services/angular-google-auth/';		//local
-	// staticPath ='/angular-google-auth/';		//gh-pages
+	staticPath ='/angular-google-auth/';		//gh-pages
 	var appPathRoute ='/';
 	var pagesPath =staticPath+'pages/';
 	

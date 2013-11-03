@@ -52,7 +52,8 @@ module.exports = function(grunt) {
 						moment:		false,
 						Pikaday: false,
 						module: false,
-						forge: false
+						forge: false,
+						gapi: false
 					}
 				},
 				beforeconcat:   {
