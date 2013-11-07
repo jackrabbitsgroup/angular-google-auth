@@ -7,7 +7,8 @@ angular.module('myApp').controller('HomeCtrl', ['$scope', 'jrgGoogleAuth', funct
 	var googleClientId ='486630891328.apps.googleusercontent.com';		//hardcoded
 	
 	//initialize google auth with client id
-	jrgGoogleAuth.init({'client_id':googleClientId, 'scope':'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email'});
+	// jrgGoogleAuth.init({'client_id':googleClientId, 'scope':'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email'});
+	jrgGoogleAuth.init({'client_id':googleClientId, 'scopeHelp':['login', 'email', 'contacts']});
 
 	//do actual login
 	var evtGoogleLogin ="evtGoogleLogin";

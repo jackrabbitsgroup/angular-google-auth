@@ -196,7 +196,6 @@ angular.module('jackrabbitsgroup.angular-google-auth', [])
 			scope =googleInfo.scope;
 		}
 		if(params.scopeHelp) {
-			var scopeMap =scopeMap;
 			scope +=' ';		//ensure space at end of existing list
 			for(ii=0; ii<params.scopeHelp.length; ii++) {
 				if(scopeMap[params.scopeHelp[ii]]) {
