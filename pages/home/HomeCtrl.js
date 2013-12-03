@@ -31,4 +31,32 @@ angular.module('myApp').controller('HomeCtrl', ['$scope', 'jrgGoogleAuth', funct
 	$scope.$on(evtGoogleLogin, function(evt, googleInfo) {
 		$scope.googleInfo =googleInfo;
 	});
+	
+	
+	$scope.googleContacts =[];
+	
+	$scope.getContacts =function(opts) {
+		var promise1 =jrgGoogleAuth.getContacts();
+		/*
+		@param {Object} data
+			@param {Array} contacts
+				@param {String} name
+				@param {String} email
+				@param {String} phone
+		*/
+		promise1.then(function(data) {
+			//for now, strip out contacts who don't have an email address (since currently aren't allowing users without an email address to be created / followed)
+			var ii;
+			var finalContacts =[];
+			for(ii =0; ii<data.contacts.length; ii++) {
+				if(data.contacts[ii].email !==undefined && data.contacts[ii].email) {
+					finalContacts.push(data.contacts[ii]);
+				}
+			}
+			// finalContacts =jrgArray.sort2D(finalContacts, 'name', {});		//sort by name
+			$scope.googleContacts =finalContacts;
+		}, function(data) {
+			$scope.$emit('evtAppalertAlert', {type:'error', msg:'Error getting Google Contacts'});
+		});
+	};
 }]);
