@@ -145,6 +145,7 @@ angular.module('jackrabbitsgroup.angular-google-auth', [])
 					var url ='https://www.googleapis.com/plus/v1/people/me' +'?access_token=' + encodeURIComponent(googleToken.access_token);
 					$http.get(url)
 					.success(function(data) {
+						params.returnVals.rawData =data;		//pass back ALL google data too
 						//email doesn't seem to be returned..?? even with scope set to access it.. oauth2 playground not evening returning it, even after I changed my email to be publicly visible...
 						params.returnVals.extraInfo ={'user_id':data.id};
 						if(params.extraInfo.emails) {
@@ -337,6 +338,7 @@ angular.module('jackrabbitsgroup.angular-google-auth', [])
 				@param {String?} type ?
 				@param {Boolean} primary True if this is the user's primary email address
 			@param {String} [emailPrimary] User's primary email address (convenience field extracted from emails array, if exists)
+		@param {Object} [rawData] The data returned directly from Google (the user profile call)
 	*/
 	function loginCallback(params) {
 		var ii;

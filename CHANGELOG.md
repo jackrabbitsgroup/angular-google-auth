@@ -1,5 +1,10 @@
 Version numbers correspond to `bower.json` version
 
+# 1.0.3
+## Features
+- return `rawData` of Google user profile data (i.e. includes `gender`)
+
+
 # 1.0.2
 ## Bug Fixes
 - make getContacts function public
