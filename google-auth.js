@@ -316,8 +316,8 @@ angular.module('jackrabbitsgroup.angular-google-auth', [])
 	*/
 	var scopeMap ={
 		'login': 'https://www.googleapis.com/auth/plus.login',
-		//'email': 'https://www.googleapis.com/auth/userinfo.email',
-		'email': 'https://www.googleapis.com/auth/userinfo.email https://www.google.com/m8/feeds',		//NOTE: this currently does NOT seem to work BUT contacts api DOES return email.. lol.. so use that instead?! It requires an extra http request so is a bit slower, but at least it works..
+		'email': 'https://www.googleapis.com/auth/userinfo.email',
+		// 'email': 'https://www.googleapis.com/auth/userinfo.email https://www.google.com/m8/feeds',		//NOTE: this currently does NOT seem to work BUT contacts api DOES return email.. lol.. so use that instead?! It requires an extra http request so is a bit slower, but at least it works..
 		'contacts': 'https://www.google.com/m8/feeds'
 	};
 	
